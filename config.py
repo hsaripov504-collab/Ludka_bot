@@ -1,4 +1,7 @@
-BOT_TOKEN = "8389508305:AAEznsCDkhc4RlS84l-x2i0ku7orHHE2lfI"  
-CHANNEL_ID = -1002766457978  
+import os
+
+BOT_TOKEN = os.environ.get('BOT_TOKEN')
+CHANNEL_ID = int(os.environ.get('CHANNEL_ID', 0))
+
 MOVE_TIMEOUT = 30
 JACKPOT_CHANCE = 5
