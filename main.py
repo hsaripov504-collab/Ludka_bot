@@ -140,5 +140,12 @@ async def handle_game(message: types.Message):
 
 # Запуск бота
 if __name__ == "__main__":
-    print("Бот запущен!")
-    executor.start_polling(dp, skip_updates=True)
+    import time
+    time.sleep(2)  # Небольшая задержка перед запуском
+    print("Бот запускается...")
+    try:
+        executor.start_polling(dp, skip_updates=True)
+    except Exception as e:
+        print(f"Ошибка: {e}")
+        time.sleep(5)
+
